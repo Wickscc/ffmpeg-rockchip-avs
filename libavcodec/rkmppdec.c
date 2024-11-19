@@ -48,6 +48,9 @@ static MppCodingType rkmpp_get_coding_type(AVCodecContext *avctx)
     case AV_CODEC_ID_MPEG1VIDEO:    /* fallthrough */
     case AV_CODEC_ID_MPEG2VIDEO:    return MPP_VIDEO_CodingMPEG2;
     case AV_CODEC_ID_MPEG4:         return MPP_VIDEO_CodingMPEG4;
+    case AV_CODEC_ID_AVS:           return MPP_VIDEO_CodingAVS;         // 添加 AVS 编码类型
+    case AV_CODEC_ID_AVS2:          return MPP_VIDEO_CodingAVSPLUS;        // 添加 AVS2 编码类型
+    case AV_CODEC_ID_AVSP:       return MPP_VIDEO_CodingAVSPLUS;     // 添加 AVS+ 编码类型
     default:                        return MPP_VIDEO_CodingUnused;
     }
 }
@@ -1033,6 +1036,12 @@ DEFINE_RKMPP_DECODER(vp9, VP9, NULL)
 #endif
 #if CONFIG_AV1_RKMPP_DECODER
 DEFINE_RKMPP_DECODER(av1, AV1, NULL)
+#endif
+#if CONFIG_AVS_RKMPP_DECODER
+DEFINE_RKMPP_DECODER(avs, avs, NULL)
+#endif
+#if CONFIG_AVSP_RKMPP_DECODER
+DEFINE_RKMPP_DECODER(avs+, avs+, NULL)
 #endif
 #if CONFIG_MPEG1_RKMPP_DECODER
 DEFINE_RKMPP_DECODER(mpeg1, MPEG1VIDEO, NULL)
