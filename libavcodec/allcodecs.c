@@ -852,7 +852,7 @@ extern const FFCodec ff_av1_amf_encoder;
 extern const FFCodec ff_av1_vaapi_encoder;
 extern const FFCodec ff_av1_rkmpp_decoder;
 extern const FFCodec ff_avs_rkmpp_decoder;
-extern const FFCodec ff_avsp_rkmpp_decoder;
+extern const FFCodec ff_avsplus_rkmpp_decoder;
 extern const FFCodec ff_libopenh264_encoder;
 extern const FFCodec ff_libopenh264_decoder;
 extern const FFCodec ff_h264_amf_encoder;

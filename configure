@@ -3219,7 +3219,7 @@ av1_nvenc_encoder_select="atsc_a53"
 
 av1_rkmpp_decoder_deps="rkmpp"
 avs_rkmpp_decoder_deps="rkmpp"
-avsp_rkmpp_decoder_deps="rkmpp"
+avsplus_rkmpp_decoder_deps="rkmpp"
 
 h263_v4l2m2m_decoder_deps="v4l2_m2m h263_v4l2_m2m"
 h263_v4l2m2m_encoder_deps="v4l2_m2m h263_v4l2_m2m"
